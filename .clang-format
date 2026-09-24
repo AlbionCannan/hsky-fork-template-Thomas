@@ -1,0 +1,15 @@
+---
+BasedOnStyle: Google
+
+DerivePointerAlignment: false
+PointerAlignment: Right
+
+UseTab: Always
+IndentWidth: 4
+TabWidth: 4
+
+AccessModifierOffset: -2
+
+ColumnLimit: 80
+
+AlignConsecutiveMacros: Consecutive
