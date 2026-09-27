@@ -61,6 +61,23 @@ void opcontrol() {
 
 	while (true) {
 
+		if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
+            left_motors.move(127);
+        } else if (master.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
+            left_motors.move(-127);
+        } else {
+            left_motors.move(0);
+        }
+
+        // --- Right Motor Group (R1 = Forward, R2 = Reverse) ---
+        if (master.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
+            right_motors.move(127);
+        } else if (master.get_digital(pros::E_CONTROLLER_DIGITAL_R2)) {
+            right_motors.move(-127);
+        } else {
+            right_motors.move(0);
+        }
+
 		pros::delay(20);
 	}
 }
